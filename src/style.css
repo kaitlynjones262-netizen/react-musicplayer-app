@@ -1,0 +1,175 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif cursive;
+}
+button {
+    padding: 12px 18px;
+    margin: 8px 5px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:active {
+    transform: scale(0.95);
+}
+button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(249, 170, 178);
+}
+
+.searchbar
+{
+    height: 10vh;
+    padding: 10px;
+    position: sticky;
+    background-color: rgb(214, 82, 97);
+    top: 0%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.searchbar input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+}
+
+.item{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(236, 247, 255);
+    border-bottom: 1px solid rgb(208, 45, 51) ;
+    background-image:linear-gradient(to bottom, rgb(255, 98, 101) ,rgb(255, 163, 163));
+    font-size: 20px;
+}
+
+.item:hover{
+    background: rgb(164, 19, 63);
+}
+
+#playlist{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.songs{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.item{
+    height: 8vh;
+}
+.item:active{
+    transform: translate(-6px);
+    box-shadow: 0 6px 10px rgb(253, 253, 253);
+}
+.item{
+    color: aliceblue;
+}
+
+#Mplayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(138, 11, 45) , rgb(210, 47, 140));
+    background-color: aliceblue;
+}
+
+#backBTN{
+    color: aliceblue;
+    background-color: rgba(255, 185, 203, 0.8);
+    padding: 8px 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: sticky;  /* keep visible at top */
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+#album img{
+    width: 80%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;   /* keeps it square */
+    object-fit: cover;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgb(59, 0, 104);
+}
+
+#album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+#Songname{
+    font-size: 30px;
+    margin-top: 20px;
+    color: aliceblue;
+}
+.slider{
+    width: 90%;
+    max-width: 400px;
+    margin: 15px 0;
+    background-color: rgb(217, 101, 200);
+}
+.slider input{
+    width: 100%;
+}
+
+/*more mobile friendly
+*/
+#Mplayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align:center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(138, 11, 45), rgb(210, 47, 140));
+}
+@media (max-width: 600px){
+    #album img {
+        width: 90%;
+    }
+}
